@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let contrat of contrats">{{contrat.contratId}} | {{contrat.libelle}} | {{contrat.type}} | {{contrat.dateEffet}}
+    <a href="#" (click)="supprimer(contrat.contratId)">Supprimer</a>
+    <a [routerLink]="['detail', contrat.contratId]" >Consulter</a>
+  </li>
+</ul>
